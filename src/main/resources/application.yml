@@ -39,15 +39,15 @@ spring:
 #    port: ${rabbitmq.port}
 #    username: guest
 #    password: guest
-#  zipkin:
-#    baseUrl: http://${trace.host}:9411/
-#  sleuth:
-#    sampler:
-#      percentage: 1
-#    integration:
-#      enabled: false
-#    scheduled:
-#      skip-pattern: org.springframework.cloud.netflix.hystrix.stream.HystrixStreamTask
+  zipkin:
+    baseUrl: http://${trace.host}:9411/
+  sleuth:
+    sampler:
+      percentage: 1
+    integration:
+      enabled: false
+    scheduled:
+      skip-pattern: org.springframework.cloud.netflix.hystrix.stream.HystrixStreamTask
 
 eureka:
   instance:
