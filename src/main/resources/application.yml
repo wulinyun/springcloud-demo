@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: landa-springcloud-demo
+  cloud:
+    client:
+      hostname: springcloud-demo
+#  rabbitmq:
+#    host: ${rabbitmq.host}
+#    port: ${rabbitmq.port}
+#    username: guest
+#    password: guest
+#  zipkin:
+#    baseUrl: http://${trace.host}:9411/
+#  sleuth:
+#    sampler:
+#      percentage: 1
+#    integration:
+#      enabled: false
+#    scheduled:
+#      skip-pattern: org.springframework.cloud.netflix.hystrix.stream.HystrixStreamTask
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://${eureka.host}:8761/eureka/
