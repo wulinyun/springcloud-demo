@@ -34,11 +34,11 @@ spring:
 #    username: tenxcloud
 #    password: tenxcloud
 #    validationQuery: SELECT 1 FROM DUAL
-#  rabbitmq:
-#    host: ${rabbitmq.host}
-#    port: ${rabbitmq.port}
-#    username: guest
-#    password: guest
+  rabbitmq:
+    host: ${rabbitmq.host}
+    port: ${rabbitmq.port}
+    username: guest
+    password: guest
   zipkin:
     baseUrl: http://${trace.host}:9411/
   sleuth:
