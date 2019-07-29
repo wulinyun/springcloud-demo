@@ -1,6 +1,6 @@
 spring:
   application:
-    name: landa-springcloud-demo
+    name: springcloud-demo
   cloud:
     client:
       hostname: springcloud-demo
