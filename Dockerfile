@@ -18,6 +18,5 @@ ENV rabbitmq_host=spring-cloud-rabbitmq
 ENV rabbitmq_port=5672
 
 #下面增加的是tc的APM要求CMD java $JAVA_OPTS -Dpinpoint.agentId=${POD_IP} -jar /app/app.jar
-#-javaagent:/tenxcloud/pinpoint-agent/pinpoint-bootstrap-1.7.3.jar -Dpinpoint.applicationName=spring-boot-demo-jar -Dpinpoint.agentId=${POD_IP}
 ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Dpinpoint.agentId=${POD_IP} -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
 #ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
