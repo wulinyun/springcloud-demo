@@ -1,9 +1,9 @@
 spring:
   application:
-    name: springcloud-demo-a
+    name: springcloud-demo
   cloud:
     client:
-      hostname: springcloud-demo-a
+      hostname: springcloud-demo
   jpa:
     database: MYSQL
     generate-ddl: true
