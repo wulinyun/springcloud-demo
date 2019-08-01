@@ -35,17 +35,17 @@ public class HelloController {
     public String demo2a() {
         return (String)this.restTemplate.getForObject("http://springcloud-demo-a/", String.class, new Object[0]);
     }
+    @GetMapping("/a2demo")
+    public String a2demo() {
+        return (String)this.restTemplate.getForObject("http://springcloud-demo/", String.class, new Object[0]);
+    }
     @GetMapping("/demo2b")
     public String demo2b() {
         return (String)this.restTemplate.getForObject("http://springcloud-demo-b/", String.class, new Object[0]);
     }
-    @GetMapping("/demo-a2b")
-    public String demoa2b() {
-        return (String)this.restTemplate.getForObject("http://springcloud-demo-b/demo-a2b", String.class, new Object[0]);
-    }
-    @GetMapping("/demo-b2a")
-    public String demob2a() {
-        return (String)this.restTemplate.getForObject("http://springcloud-demo-a/demo-b2a", String.class, new Object[0]);
+    @GetMapping("/b2demo")
+    public String b2demo() {
+        return (String)this.restTemplate.getForObject("http://springcloud-demo/", String.class, new Object[0]);
     }
     @GetMapping({"/b/info"})
     public String binfo() {
