@@ -23,13 +23,17 @@ public class HelloController {
     public String a2c() {
         return (String)this.restTemplate.getForObject("http://tracing-demo-c/", String.class, new Object[0]);
     }
-    @GetMapping({"/c/info"})
-    public String cinfo() {
-        return (String)this.restTemplate.getForObject("http://tracing-demo-c/", String.class, new Object[0]);
+    @GetMapping("/demo/info")
+    public String demo2c() {
+        return (String)this.restTemplate.getForObject("http://springcloud-demo/", String.class, new Object[0]);
     }
     @GetMapping({"/b/info"})
     public String binfo() {
         return (String)this.restTemplate.getForObject("http://tracing-demo-b/", String.class, new Object[0]);
+    }
+    @GetMapping({"/c/info"})
+    public String cinfo() {
+        return (String)this.restTemplate.getForObject("http://tracing-demo-c/", String.class, new Object[0]);
     }
     @GetMapping({"/b2c"})
     public String b2c() {
