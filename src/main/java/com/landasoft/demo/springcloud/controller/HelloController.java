@@ -19,13 +19,25 @@ public class HelloController {
     {
         return "demoInfo";
     }
+    @GetMapping("/demo/info")
+    public String demo() {
+        return (String)this.restTemplate.getForObject("http://springcloud-demo/", String.class, new Object[0]);
+    }
     @GetMapping("/demo-a/info")
-    public String demo2b() {
-        return (String)this.restTemplate.getForObject("http://springcloud-demo-b/", String.class, new Object[0]);
+    public String demoa() {
+        return (String)this.restTemplate.getForObject("http://springcloud-demo-a/", String.class, new Object[0]);
     }
     @GetMapping("/demo-b/info")
+    public String demob() {
+        return (String)this.restTemplate.getForObject("http://springcloud-demo-b/", String.class, new Object[0]);
+    }
+    @GetMapping("/demo2a")
     public String demo2a() {
         return (String)this.restTemplate.getForObject("http://springcloud-demo-a/", String.class, new Object[0]);
+    }
+    @GetMapping("/demo2b")
+    public String demo2b() {
+        return (String)this.restTemplate.getForObject("http://springcloud-demo-b/", String.class, new Object[0]);
     }
     @GetMapping("/demo-a2b")
     public String demoa2b() {
