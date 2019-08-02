@@ -41,6 +41,8 @@ spring:
     password: guest
   zipkin:
     baseUrl: http://${trace.host}:9411/
+    sender:
+      type: rabbit
   sleuth:
     sampler:
       percentage: 1
